@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+    angular-ivy-d44bgr:
+        image: node:14.18.1
+        command: sh -c "npm install && npm start"
+        # host MUST be set in package.json, e.g.
+        # start:  "ng serve --host 0.0.0.0"
+        working_dir: /app
+        ports: 
+            - 4200:4200
+        volumes:
+            - .:/app
+            - angular_ivy_d44bgr:/app/node_modules
+ 
+volumes:
+  angular_ivy_d44bgr:
