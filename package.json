@@ -18,7 +18,8 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --host 0.0.0.0",
+    "start-docker": "ng serve --host 0.0.0.0 --poll 100",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
